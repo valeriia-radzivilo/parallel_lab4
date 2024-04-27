@@ -33,6 +33,7 @@ public class WordSearcher {
 
         commonWords.forEach((word, count) -> System.out.println(word + ": " + count));
     }
+    
 
     private static class WordSearchTask extends RecursiveTask<Map<String, Integer>> {
         private final List<String> words;

@@ -66,9 +66,7 @@ public class ITKeywordSearcher {
 
                 // remove punctuation and convert to lowercase
                 words.set(0, words.get(0).replaceAll("[^a-zA-Z]", "").toLowerCase());
-                if (Arrays.asList(keywords).contains(words.get(0))) {
-                    System.out.println(fileName.toUpperCase() + "->  Keyword found: " + words.get(0));
-                }
+              
                 return Arrays.asList(keywords).contains(words.get(0));
             } else {
                 ITKeywordSearchTask task1 = new ITKeywordSearchTask(words.subList(0, words.size() / 2), fileName);

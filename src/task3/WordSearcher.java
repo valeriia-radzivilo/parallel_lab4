@@ -11,8 +11,10 @@ import java.util.concurrent.RecursiveTask;
 
 public class WordSearcher {
     public static void main(String[] args) throws Exception {
-        String text1 = new String(Files.readAllBytes(Paths.get("assets/text_task3.txt")));
-        String text2 = new String(Files.readAllBytes(Paths.get("assets/second_text_task3.txt")));
+        // small_word_search_1.txt and small_word_search_2.txt are small text files for testing
+        // text_task3.txt and second_text_task3.txt are large text files for testing
+        String text1 = new String(Files.readAllBytes(Paths.get("assets/small_word_search_1.txt")));
+        String text2 = new String(Files.readAllBytes(Paths.get("assets/small_word_search_2.txt")));
 
         List<String> words1 = Arrays.asList(text1.split("\\s+"));
         List<String> words2 = Arrays.asList(text2.split("\\s+"));
@@ -33,7 +35,7 @@ public class WordSearcher {
 
         commonWords.forEach((word, count) -> System.out.println(word + ": " + count));
     }
-    
+
 
     private static class WordSearchTask extends RecursiveTask<Map<String, Integer>> {
         private final List<String> words;

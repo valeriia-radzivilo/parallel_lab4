@@ -6,7 +6,7 @@ import task2.task3_grade_book.MainGradeBook;
 public class TestForkJoinSpeedup {
 
     public static void main(String[] args) {
-        GradeBook journal = new GradeBook(1000, 1000, 4);
+        GradeBook journal = new GradeBook(1000, 10000, 4);
 
         for (int i = 0; i < 10; i++) {
             final long startTime = System.currentTimeMillis();

@@ -10,8 +10,12 @@ public class Main {
             // task1_large_text.txt is a large text file for testing
             final String text = new String(Files.readAllBytes(Paths.get("assets/task1_large_text.txt")));
 
+            for (int i = 0; i < 10; i++) {
+                TextAnalysis.analyzeText(text, false);
+            }
+
             final long startTime = System.currentTimeMillis();
-            TextAnalysis.analyzeText(text);
+            TextAnalysis.analyzeText(text, true);
             final long endTime = System.currentTimeMillis();
 
             long durationWithForkJoin = endTime - startTime;
